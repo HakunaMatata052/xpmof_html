@@ -631,13 +631,23 @@
             titOnClassName: "active"
         });
         (function () {
-                for (var i = 1; i <= 100; i++) {
-                    if (i % 3 == 0 || i % 7 == 0 || String(i).indexOf('3') >= 0 || String(i).indexOf('7') >= 0) {
-                        console.log(i)
-                    }
+            for (var i = 1; i <= 100; i++) {
+                if (i % 3 == 0 || i % 7 == 0 || String(i).indexOf('3') >= 0 || String(i).indexOf('7') >= 0) {
+                   // console.log(i)
                 }
-                })()
-
+            }
+        })()
+        function fun() {
+            console.log(this.num)
+        }
+        var obj = {
+            num:1,
+            sey:{
+                num:2,
+                sey:fun
+            }
+        }
+        obj.sey.sey()
     </script>
 </body>
 
